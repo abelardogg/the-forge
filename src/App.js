@@ -7,11 +7,13 @@ function App() {
       <article id="introduction">
         <h1 id="title">The forge</h1>
         <p>
-          The forge its a tool that you can use to create your own components to integrate into your web projects
+          The forge its a CSS component builder that makes easier create UI components for webapps specially for non-developers users. Minimal CSS knowledge is required.
         </p>
       </article>
       <hr/>
-      <Preview/>
+      <div id="preview-wrapper">
+        <Preview/>
+      </div>
       <hr/>
       <Controls/>
     </div>

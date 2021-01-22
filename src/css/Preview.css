@@ -1,3 +1,4 @@
+#preview-wrapper{position: sticky; top: 0; background-color: white; color: #1d1d1d;}
 #preview-container{
     display: flex;
     justify-content: center;

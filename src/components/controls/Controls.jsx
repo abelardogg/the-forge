@@ -1,7 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import '../../css/Controls.css'
 import { updateCss } from '../../redux/actions/preview';
 import Sizing from './Sizing';
+import Borders from './Borders';
+
 
 class Controls extends React.Component{
     constructor(props){
@@ -24,6 +27,12 @@ class Controls extends React.Component{
             <h2>Controls</h2>
             <Sizing currentWidth={css.width} updateWidth={this.updateCss} 
             currentHeight={css.height} updateHeight={this.updateCss} />
+
+            <Borders 
+            borderWidth={css.borderWidth} updateBorderWidth={this.updateCss} 
+            updateBorderStyle={this.updateCss}
+            updateBorderColor={this.updateCss}/>
+
         </>);
     }
 }
