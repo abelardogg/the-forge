@@ -1,0 +1,10 @@
+#preview-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 60vh;
+}
+
+#preview{
+    transition: all .8s;
+}

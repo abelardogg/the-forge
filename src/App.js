@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 import Preview from './components/Preview';
 import Controls from './components/controls/Controls';
 function App() {

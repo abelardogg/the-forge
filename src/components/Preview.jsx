@@ -1,30 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateBorder } from '../redux/actions/preview'
+import '../css/Preview.css'
+import { updateCss } from '../redux/actions/preview';
 
 class Preview extends React.Component{
     constructor(props){
         super(props);
     }
 
-    getArchive = () => {
-        // TODO implement endpoint call
-        return null;
-    }
-
-
-
     componentWillMount(){
-        console.info('Cart.jsx will mount');
+        console.info('Preview.jsx will mount');
         console.info(this.props)   
     }
 
     render(){
-        return (<div id="preview-container">
+        return (<>
+        <h1>Preview</h1>
+        <div id="preview-container">
             <div id="preview" style={this.props.preview}>
                 This is the preview container.
             </div>
-        </div>);
+        </div>
+        </>);
     }
 }
 
@@ -36,7 +33,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = () => {
     return {
-        updateBorder
+        updateCss
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps())(Preview)

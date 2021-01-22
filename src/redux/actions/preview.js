@@ -1,5 +1,6 @@
-export const updateBorder = (width, style, color) => {
+export const updateCss = (css) => {
     return {
-        type: 'UPDATE_BORDER'
+        type: 'UPDATE_CSS',
+        css
     }
 }

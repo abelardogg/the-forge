@@ -1,0 +1,8 @@
+*{box-sizing: border-box;}
+body{min-height: 100vh; padding: 15px;}
+.flex{display: flex;}
+.column{flex-direction: column;}
+.align-center{align-items: center;}
+.justify-content{justify-content: center;}
+input{width: 50px;}
+

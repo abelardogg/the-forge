@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateBorder } from '../../redux/actions/preview';
+import { updateCss } from '../../redux/actions/preview';
 import Sizing from './Sizing';
 
 class Controls extends React.Component{
@@ -8,20 +8,22 @@ class Controls extends React.Component{
         super(props);
     }
 
-    getArchive = () => {
-        // TODO implement endpoint call
-        return null;
+    updateCss = (keyValue) =>{
+        console.info(keyValue)
+        this.props.updateCss(keyValue);
     }
 
     componentWillMount(){
-        console.info('Cart.jsx will mount');
-        console.info(this.props)   
+        console.info('Controls.jsx will mount');
+        console.info(this.props);  
     }
 
     render(){
+        const css = this.props.preview;
         return (<>
             <h2>Controls</h2>
-            <Sizing/>
+            <Sizing currentWidth={css.width} updateWidth={this.updateCss} 
+            currentHeight={css.height} updateHeight={this.updateCss} />
         </>);
     }
 }
@@ -34,7 +36,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = () => {
     return {
-        updateBorder
+        updateCss
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps())(Controls)
